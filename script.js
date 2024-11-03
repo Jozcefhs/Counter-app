@@ -73,9 +73,13 @@ console.log(lapsCompleted)*/
     // 1. Create a function, save(), which logs out the count when it's called
 function save() {
     let them = count + " ~ "
-    pre.textContent += them
-    count = 0
-    display.textContent = 0
+    if (count < 1) {
+        pre.textContent += ""
+    }else{
+        pre.textContent += them
+        count = 0
+        display.textContent = 0
+    }
 }
 
     //Exercise 6
